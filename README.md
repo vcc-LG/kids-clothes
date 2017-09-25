@@ -33,3 +33,9 @@ The retailers under investigation are:
 - [Primark](https://www.primark.com/en/products/new-arrivals/kids)
 
 These were chosen according to picking the top results on a Google search for "UK+kids+clothes". I think they represent a pretty mainstream selection of where I might go to get clothes for my kids.
+
+Each of these sites presents their stock slightly differently, so each store has their own function to look for the relevant HTML tags using [BeautifulSoup](https://www.crummy.com/software/BeautifulSoup/) and to use Selenium to scroll down the page if there are items loaded dynamically. I then have a MongoDB database with a collection of every animal I could think of which might be on kids clothes. Even weird ones like camels and swans. Most of the animals have a list of aliases so I don't miss things like 'piggy', 'piglet', 'pigs' etc. for 'pig'. Just to test out a couple of theories that may be total nonsense, I've also assigned each animal a weight (a *really* broad average of male/female weights from Wikipedia) and their diet (herbivore, carnivore, omnivore). My guess is that the 'boy' animals tend to be big and eat meat.
+
+Where was I... so the functions go through each of the HTML tags where the clothing item's name is stored and cross matches each string with the animals and their aliases in the database. If it finds a match it increments a total count for that animal, as well as an individual count for that retailer in the document. The total code takes a while to run because it's got loads of URLs to investigate as well as simulating the browser doing loads of human-speed scrolling.
+
+## Results
