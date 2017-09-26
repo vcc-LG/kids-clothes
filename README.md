@@ -39,3 +39,13 @@ Each of these sites presents their stock slightly differently, so each store has
 Where was I... so the functions go through each of the HTML tags where the clothing item's name is stored and cross matches each string with the animals and their aliases in the database. If it finds a match it increments a total count for that animal, as well as an individual count for that retailer in the document. The total code takes a while to run because it's got loads of URLs to investigate as well as simulating the browser doing loads of human-speed scrolling.
 
 ## Results
+
+My scripts found _X_ total items of clothing which had one of my animals in the title. Here are the top five animals for boys and girls respectively:
+
+| Animal        | % of total boys (n)           | % of total girls (n)    |
+| ------------- |-------------:| -----:|
+| Animal 1     | right-aligned | $1600 |
+| Animal 2     | centered      |   $12 |
+| Animal 3 | are neat      |    $1 |
+| Animal 4 | are neat      |    $1 |
+| Animal 5 | are neat      |    $1 |
