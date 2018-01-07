@@ -42,6 +42,27 @@ The script goes through each of the HTML tags where the clothing item's name is 
 - The study assumes that the animal name is in the item title - which is not always true
 - The study was performed near Christmas, skewing the results to include penguins etc. I suppose ideally this would be done during an animal-agnostic time of year (i.e. not Halloween, Christmas, Easter etc.)
 
+### Usage
+
+Install packages with:
+
+```
+pip install -r requirements.txt
+```
+
+Make sure MongoDB is running locally, then run:
+
+```
+python src/create_db.py
+python src/scrape_pages.py
+```
+
+The process takes around 10-15 mins to run completely. You can produce some of the results using:
+
+```
+python analyse_results.py
+```
+
 ### Results
 
 Total number of boys clothes found = 654
@@ -51,18 +72,18 @@ The top 5 animals for boys were:
 
 | Animal        | Number (% of total boys' items)           | Equivalent girls' number (% of total girls' items)  |
 | ------------- |:-------------| :-----|
-| Dinosaur    | 215 (32.87 %)| 21 (1.80 %)|
-| Bear    | 87 (13.30 %)	| 69 (5.90 %)|
-| Pig    | 47 (7.19 %)	| 55 (4.70 %)|
-| Shark    | 39 (5.96 %)| 0 (0.0 %)|
-| Penguin    | 29 (4.43 %)	| 65 (5.56 %)|
+|Dinosaur |195 (32.83 %)	| 17 (2.00 %)|
+|Pig | 47 (7.91 %)	           |58 (6.82 %)|
+|Shark | 46 (7.74 %)		 |0 (0.0 %)|
+|Bear | 43 (7.24 %)		 | 35 (4.12 %)|
+|Mouse | 23 (3.87 %) 	 | 51 (6.00 %)|
 
 The top 5 animals for girls were:
 
 | Animal        | Number (% of total girls' items)           | Equivalent boys' number (% of total boys' items)  |
 | ------------- |:-------------| :-----|
-| Unicorn    | 229 (19.59 %)| 3 (0.46 %)|
-| Rabbit    | 174 (14.88 %)| 10 (1.53 %)|
-| Cat    | 129 (11.04 %) | 1 (0.15 %)|
-| Horse    | 115 (9.84 %)		|1 (0.15 %)|
-| Mouse    | 95 (8.13 %)| 25 (3.82 %)|
+|Unicorn | 226 (26.59 %)	 | 2 (0.34 %)|
+|Rabbit | 119 (14.00 %)	 | 5 (0.84 %)|
+|Cat | 103 (12.12 %)	 |3 (0.51 %)|
+|Horse | 75 (8.82 %)		|1 (0.17 %)|
+|Pig | 58 (6.82 %)	 	|47 (7.91 %)|
